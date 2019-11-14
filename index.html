@@ -4,6 +4,7 @@
 	<title>
 		A Puzzle
 	</title>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,12 +14,19 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
 	<script src="script.js" defer></script>
 </head>
+
 <body>
 	<center>
-		<h1>2 Person Coin Game</h1>
-		<div class="container" id="numbers">
-			<button class="btn" id="test">Test</button>
+		<h1 class="jumbotron p-5">2 Person Coin Game</h1>
+		<div class="container pb-5" id="numbers">
+			<button class="btn btn-danger px-4" id="test">Test</button>
+		</div>
+
+		<div class="container">
+			<p class="text-primary">Player: <span class="badge badge-primary px-4" id="pl_badge"> </span></p>
+			<p class="text-success">AI: <span class="badge badge-success px-4" id="ai_badge"> </span></p>
 		</div>
 	</center>
 </body>
+
 </html>

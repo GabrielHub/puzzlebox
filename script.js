@@ -1,6 +1,9 @@
 let lengthOfArray = [6, 8, 10, 12];
 let numbers = [];
 
+let playerValue = 0;
+let aiValue = 0;
+
 //add the inital numbers
 
 $("#test").click(function() {
@@ -22,7 +25,7 @@ function SetNumbers() {
 	//get the random number, and also add buttons to the div
 	for (let i = 0; i < size; i++) {
 		let r_num = Math.floor(Math.random() * (max - min) + min); //random value
-		let $input = $("<button class='btn' id='r_num_" + i + "'></button").text(r_num); //create button
+		let $input = $("<button class='btn mx-1 p-2' id='r_num_" + i + "'></button").text(r_num); //create button
 		numbers.push(r_num); //add to array
 		$input.appendTo($("#numbers")); //attach
 	}
@@ -33,5 +36,19 @@ function SetNumbers() {
 }
 
 function PlayerChooses() {
-	console.log('CLICKED!');
+	console.log($(this).text());
+
+	//add border to show how chose
+	$(this).addClass('border-bottom  border-primary');
+
+	//display total value
+	playerValue += parseInt($(this).text());
+	$('#pl_badge').text(playerValue.toString());
+
+	//remove the click event
+	$(this).unbind();
+}
+
+function AIChooses() {
+
 }
