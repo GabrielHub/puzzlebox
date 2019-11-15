@@ -6,9 +6,16 @@ let numLength = 0; //keeps track of how many choosable numbers are left
 let playerValue = 0;
 let aiValue = 0;
 
-//add the inital numbers
-
+//init buttons
 $("#test").click(function() {
+	SetNumbers();
+});
+
+$('#resetButton').click(function() {
+	playerValue = 0;
+	aiValue = 0;
+	$('#ai_badge').text(aiValue.toString());
+	$('#pl_badge').text(playerValue.toString());
 	SetNumbers();
 });
 

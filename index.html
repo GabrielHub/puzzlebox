@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-		A Puzzle
+		An Algorithmic Puzzle
 	</title>
 
 	<meta charset="utf-8">
@@ -17,15 +17,20 @@
 
 <body>
 	<center>
-		<h1 class="jumbotron p-5">2 Person Coin Game</h1>
+		<div class="container jumbotron p-5 mx-2">
+			<h1 class="d-inline-block">The Number Game </h1>
+			<a href="help.html" class="badge badge-info align-top m-2 p-1">Help</a>
+		</div>
+		
+
 		<div class="container pb-5" id="numbers">
-			<button class="btn btn-danger px-4" id="test">Test</button>
+			<button class="btn btn-dark px-4" id="test">Play!</button>
 		</div>
 
-		<div class="container">
+		<!--<div class="container">
 			<p class="text-primary">Player: <span class="badge badge-primary px-4" id="pl_badge"> </span></p>
 			<p class="text-success">AI: <span class="badge badge-success px-4" id="ai_badge"> </span></p>
-		</div>
+		</div>-->
 
 		<div class="container" id="winState">
 			<!-- Modal -->
@@ -33,7 +38,7 @@
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title text-center" id="exampleModalLabel">Game Finished!</h5>
+			        <h5 class="modal-title text-center" id="exampleModalLabel">Game Finished</h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
@@ -42,13 +47,34 @@
 			        
 			      </div>
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Click Reset Button To Try Again</button>
+			        <button type="button" class="btn btn-outline-danger" id="resetButton" data-dismiss="modal">Reset Game</button>
 			      </div>
 			    </div>
 			  </div>
 			</div>
+
 		</div>
 	</center>
+
+	<div class="container m-3 p-4">
+		
+	</div>
+
+	<div class="float-left ml-5">
+		<button type="button" class="btn btn-outline-danger" id="resetButton">
+			Reset Game
+		</button>
+	</div>
+	<div class="float-right mx-5">
+		<div class="row">
+			<div class="col-xs-6">
+				<p class="text-primary">Player: <span class="badge badge-primary px-3" id="pl_badge"> </span></p>
+			</div>
+			<div class="col-xs-6">
+				<p class="text-success mx-3">AI: <span class="badge badge-success px-3" id="ai_badge"> </span></p>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
