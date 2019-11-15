@@ -19,6 +19,15 @@ $('#resetButton').click(function() {
 	SetNumbers();
 });
 
+$('#resetButton2').click(function() {
+	playerValue = 0;
+	aiValue = 0;
+	$('#ai_badge').text(aiValue.toString());
+	$('#pl_badge').text(playerValue.toString());
+	SetNumbers();
+});
+
+
 function SetNumbers() {
 	//get a random even size of the array
 	let size = lengthOfArray[Math.floor(Math.random() * lengthOfArray.length)];
