@@ -1,6 +1,8 @@
 let lengthOfArray = [6, 8, 10, 12];
-let numbers = [];
+let numbers = []; //array of the entire number list
+let numLength = 0; //keeps track of how many choosable numbers are left
 
+//track total scores
 let playerValue = 0;
 let aiValue = 0;
 
@@ -25,10 +27,12 @@ function SetNumbers() {
 	//get the random number, and also add buttons to the div
 	for (let i = 0; i < size; i++) {
 		let r_num = Math.floor(Math.random() * (max - min) + min); //random value
-		let $input = $("<button class='btn mx-1 p-2' id='r_num_" + i + "'></button").text(r_num); //create button
+		let $input = $("<button class='btn mx-1 p-2' id='r_num'></button").text(r_num); //create button
 		numbers.push(r_num); //add to array
 		$input.appendTo($("#numbers")); //attach
 	}
+
+	numLength = numbers.length;
 
 	//make sure to remove and then reapply anytime a number is actually chosen
 	$('#numbers button').first().click(PlayerChooses);
@@ -36,19 +40,69 @@ function SetNumbers() {
 }
 
 function PlayerChooses() {
-	console.log($(this).text());
-
-	//add border to show how chose
+	//add border to show who chose
 	$(this).addClass('border-bottom  border-primary');
 
 	//display total value
 	playerValue += parseInt($(this).text());
 	$('#pl_badge').text(playerValue.toString());
 
-	//remove the click event
+	//remove click event, change id, lower size
 	$(this).unbind();
+	$(this).attr("id", "usedButton");
+	numLength--;
+
+	//remove functions, then reapply to new first and last elements
+	$('#numbers #r_num').first().unbind();
+	$('#numbers #r_num').last().unbind();
+
+	$('#numbers #r_num').first().click(PlayerChooses);
+	$('#numbers #r_num').last().click(PlayerChooses);
+
+	//AI logic
+	if (parseInt($('#numbers #r_num').first().text()) >= parseInt($('#numbers #r_num').last().text())) {
+		AIChooses($('#numbers #r_num').first());
+	}
+	else {
+		AIChooses($('#numbers #r_num').last());
+	}
 }
 
-function AIChooses() {
+function AIChooses(n) {
+	//passed in the larger number, always select that one 
 
+	//add border to show who chose
+	n.addClass('border-bottom  border-success');
+
+	//display total value
+	aiValue += parseInt(n.text());
+	$('#ai_badge').text(aiValue.toString());
+
+	//remove click event, change id, lower size
+	n.unbind();
+	n.attr("id", "usedButton");
+	numLength--;
+
+	//remove functions, then reapply to new first and last elements
+	$('#numbers #r_num').first().unbind();
+	$('#numbers #r_num').last().unbind();
+
+	$('#numbers #r_num').first().click(PlayerChooses);
+	$('#numbers #r_num').last().click(PlayerChooses);
+
+	if (numLength == 0) {
+		let winStatement = "";
+
+		//win / lose state
+		if (aiValue >= playerValue) {
+			winStatement = "AI wins, try again!";
+		}
+		else {
+			winStatement = "You've won! But can you win everytime?";
+		}
+
+		//Activate modal
+		$('#winContent').text(winStatement);
+		$('#exampleModal').modal();
+	}
 }
