@@ -1,4 +1,4 @@
-let lengthOfArray = [6, 8, 10, 12];
+let lengthOfArray = [4, 6, 8, 10];
 let numbers = []; //array of the entire number list
 let numLength = 0; //keeps track of how many choosable numbers are left
 
@@ -33,7 +33,7 @@ function SetNumbers() {
 	let size = lengthOfArray[Math.floor(Math.random() * lengthOfArray.length)];
 
 	//max and min values for random numbers
-	let max = 98;
+	let max = 10;
 	let min = 1;
 
 	//clear the previous numbers
