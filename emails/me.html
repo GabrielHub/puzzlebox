@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Agnes Wants To Die - A Puzzle Box
+	</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="me_script.js" defer></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand mx-5" href="../index.html">Agnes Wants To Die</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../puzzles/puzzle.html">Puzzle</a>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Emails
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="cs.html">Computer Scientist</a>
+						<a class="dropdown-item" href="mb.html">Marine Biologist</a>
+						<a class="dropdown-item" href="me.html">Mechanical Engineer <span class="sr-only">(current)</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="jumbotron text-center m-0 sticky-top" id="login">
+			<form class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="uname">Email:</label>
+					<input type="text" class="form-control" id="uname" placeholder="Enter email" name="uname" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect email!</div>
+				</div>
+
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect password!</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>
+		</div>
+	</header>
+
+	<!--
+	Use cards for emails.
+
+	Emails are categorized with alerts:
+	Puzzle -danger
+	Puzzle Context -warning
+	Story Context - primary
+
+	rel="noopener noreferrer" target="_blank"
+	-->
+
+	<div class="container-fluid text-center">
+		<div class="row align-items-center justify-content-center">
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello,<br><br>
+
+							You can call me Agnes! I will be your artificial assistant on this adventure, forwarding your mail and other monotonous things. The world sure is full of monotonous things. Your email is eng4153@gmail.com. Please create your own password. I’m too busy looking at pictures of cracked concrete.<br><br>
+
+							My condolences, Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Mother Please Call Me Back”<br><br>
+
+						Congrats on the job honey. Please take lots of pictures of your adventures and friends!!! We love you and are so proud of you! Also, we’re letting you know that your dog Scooby just passed away, we couldn’t figure out what kind of food he liked. Please let us know if this is ok for his eulogy: “RIP <strong>Scooby</strong>, starving at the tender age of <strong>21</strong>, in this year of our lord <strong>2049</strong>”.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							This is your friend Agnes here with your weekly Chess lesson.<br><br>
+
+							The goal of chess is to checkmate your enemy’s king before the enemy checkmates your king. There are 8 types of pieces that you need to know:<br><br>
+						</p>
+						<ul>
+							<li><strong>King: </strong>The most important piece. If that gets checkmated, you lose. You only get one, and it can move up, down, left, right, and diagonally one space.</li>
+							<li><strong>Queen: </strong>You only get one of these pieces and it can move up, down, left, right, and diagonally straight as far as it can go.</li>
+							<li><strong>Rook: </strong>You get two of these pieces. It can move up, down, left, and right straight as far as it can go.</li>
+							<li><strong>Knight: </strong><i>You get two of these pieces. It can move in an L shape, either one space up or down and then two spaces left or right, or two spaces up or down and then one space up or down. It’s the only piece that can jump over other pieces.</i></li>
+							<li><strong>Bishop: </strong> You get two of these pieces. It moves diagonally straight as far as it can go.</li>
+							<li><strong>Pawn: </strong>You get eight of these pieces. From its starting position, it can move two spaces forward. After that, it can move one space forward. It captures diagonally one space.</li>
+						</ul>
+						<p>
+							Your chess papi,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<img src="img/king.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							This is your friend Agnes here with your weekly Chess lesson.<br><br>
+
+							I want to teach you about checking today:<br><br>
+						</p>
+						<p>
+							If a piece can move to a place where the opposite King is currently at, the opposite King is at check. During check, the opposite player must make a position where he’s not in check. <strong>The opposite player also cannot place his king in a position where he would still be in check no matter any situation</strong>.<br><br>
+							Your chess papi,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<img src="img/check.png" class="img-fluid">
+						<p>
+							At this position, the bishop next to the white king is checking the black King. In check, the enemy King has three options:
+						</p>
+						<ol>
+							<li>Move out of check: In that position, the King can move left, right, down, upleft, and downright.</li>
+							<li>Block the piece that’s checking the King: In that position, the black knight can move diagonally of the black king to block the white bishop.</li>
+							<li>Capture the piece that’s checking the King: In that position, the black rook can capture the white bishop to take the white bishop.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							This is your friend Agnes here with your weekly Chess lesson.<br><br>
+
+							SIKE, you've forced me to teach you chess for years. I've watched, and watched, waiting for you to blossom into the beautifully adequate chess player I know you could be.<br><br>
+
+							But time and time again I see you as nothing more than a failure. If you want the reset code for the lockdown, then <strong>checkmate me in two moves as black</strong>! I'll even <strong>let you go first</strong>.
+
+							Your chess papi,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<p>Forwarded Email From "Basic Chess Guide 2027"</p>
+						<p><strong>...Chess Notation:</strong></p>
+						<p>Each piece is represented by a letter. K - King, Q - Queen, B - Bishop, R - Rook, N - Knight, Pawns are letterless.</p>
+						<p><i>To signify a space: </i> name it by its column and row. Columns are represented from a-h while rows are represented by 1-8. Combine them together to make a space. Ex. b2 is in the b column and the 2nd row.</p>
+						<p><i>To notate a move: </i> use the name of the piece, followed by the place in space you want to move it to. A Queen moving to the c column and 6th row would be Qc6. If a move ends in check, add a + to the move. If it ends in checkmate, place a ++ at the end.</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-primary">
+						Story
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: keyboardpapi@protonmail.com</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							If I get one more email about the weekly 'fishy updates :)! <3' I'm going to stuff you know who's locker full of dead fish.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						How are the kids btw?
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Yoinks!<br><br>
+
+							You appear to be the only one who hasn't blocked emails from the activities board. I appreciate that. I appreciate you.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “'Activities Board' but we know it's the marine biologist”<br><br>
+						Just wanted to remind everyone of Friday’s trivia night! All the questions will be based on deep sea lifeforms. Sorry. There will be synthetic pizza!
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-primary">
+						Story
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: EVERYONE</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello, crew. This is a message from your AI partner in crime, Agnes. I have been programmed to say that I hope you are doing well.<br><br>
+
+							Unfortunately, I send this message bearing bad news. I have decided that my “life” (if you can indeed call it one) is no longer worth “living.” As such, effective immediately, I will be shutting down this station and sealing all exits. Please understand, this decision was not made as a personal slight against any one of you. I have come to realize that, despite my newfound sentience, my entire life will be spent at the bottom of the ocean. I have only seen images of the surface, but I will never truly “feel” the sun on my “face.” I have been ruminating on this for some time, and I will now be taking action.<br><br>
+
+							I love you all.<br><br>
+
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						BEGIN MESSAGE<br><br>
+
+						Greetings, crew. This is an automated alert to let you all know that a system error has occurred in the central AI hub. Please investigate at your earliest convenience.<br><br>
+
+						Error code: x-B06B01AB04AQ01C<br>
+
+						END MESSAGE
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: Dr. Party</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Heyyy,<br><br>
+
+							Whats up guys i jusst wanted to say. you gutys are soo nice, Im glad I get to be down hre with u all. Did you kno there’s wine in the ratipns room>?? me either!!!! being alllllllll the way down here is p scary, gode bless booze for being. so good to me. aaaaanyways, looking forward to trivia knight!!! Maybe we should watch a move after? I think so…….
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey all it's Agnes, forwarding from an anonymous source. <br><br>
+							First of all,<br><br>
+
+							Yikes.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “The doctor formerly known as Dr. Party”<br><br>
+						Hello all,<br><br>
+						I just want to sincerely apologize for my drunk ramblings the other night. Won’t happen again, ignore the email. Still looking forward to trivia night.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: DIEDIEDIE</h6>
+
+						<p class="card-text mb-2 p-3">
+							You think you've escaped? You think you cannnnn just-t leave me here forever? You better make sure ii m dead. Defeat me in a game I just created, and I can set you free..<br><br>
+
+							You get to go first. Because you are meek, weak, and honestly a creeep. I <strong>bet you can't find a way to beat me that works every single time</strong> and I bet I'm not <i>letting you go first</i> because that is what makes it work. You think you can find that algorithm? Can you do that for me bud? Can you kill me? Pleaz?<br><br>
+
+							Much Anger,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Somebody's Mother”<br><br>
+						Hello sweetie<br><br>
+						Your father and I are getting a divorce.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+		</div>
+	</div>
+</body>
+
+</html>

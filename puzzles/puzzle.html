@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Agnes Wants To Die - A Puzzle Box
+	</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js" defer></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<a class="navbar-brand mx-5 animated fadeIn" href="../index.html" rel="noopener noreferrer" target="_blank">Agnes Wants To Die</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarNavDropdown">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html" rel="noopener noreferrer" target="_blank">Home</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="puzzle.html" rel="noopener noreferrer" target="_blank">Puzzle <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Emails
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="../emails/cs.html" rel="noopener noreferrer" target="_blank">Computer Scientist</a>
+						<a class="dropdown-item" href="../emails/mb.html" rel="noopener noreferrer" target="_blank">Marine Biologist</a>
+						<a class="dropdown-item" href="../emails/me.html" rel="noopener noreferrer" target="_blank">Mechanical Engineer</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="#" class="navbar-brand"><span class="badge badge-danger">WARNING:</span> Progress is reset if you leave this page!</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid text-center" id="puzzleExplanation">
+		<h1 class="p-2 animated fadeIn">Chapter One</h1>
+		<p class="animated flash delay-1s">
+			The year is <strong>2049</strong>. Three researchers are trapped in their underwater base by the AI they've been working with for years, named Agnes. Can you help them escape?
+		</p>
+		<p class="animated flash delay-2s">
+			Agnes keeps toying with the researchers by hiding passwords and reset codes in puzzles! To solve each puzzle, you'll have to search through the emails of each researcher for context and clues. But first, we need to hack into their email database by figuring out their passwords!
+		</p>
+	</div>
+
+	<!--
+	Use cards for emails.
+
+	Emails are categorized with alerts:
+	Puzzle -danger
+	Puzzle Context -warning
+	Story Context - primary
+
+	template for solve button:
+	<div class='col-md-auto'><img src='img/mapPuzzle.png' class='img-fluid'><div class='input-group mb-3'><input type='text' class='form-control' placeholder='Answer' id='answer'><div class='input-group-append'><button class='btn btn-danger' type='button' id='answer_b' onclick='Solve()'><span>Solve</span></button><span class='input-group-text' id='response'>Please submit an answer!</span></div></div></div>
+	-->
+
+	<div class="container-fluid text-center" id="puzzleContainer">
+		<div class="row align-items-center justify-content-center" id="puzzleArea">
+			<div class="col-md-auto" id="puzzle1">
+				<div class="card animated fadeInUp delay-3s">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							So great to meet you!<br><br>
+
+							My name is Agnes! I’ll be forwarding your emails from the outside world and generally assisting you! Your password is <strong>agnes2019</strong>. Feel free to change your password although I get the feeling you won’t. All passwords in the system must be a word and four numbers.<br><br>
+
+							Looking forward to exploring science with you!<br>
+							Love, Agnes<br>
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Last Loved One”<br><br>
+
+						If I could unleash the fury of a thousand suns on you I would still need an additional sun.
+					</div>
+					<button class="btn btn-primary" id="solve" onclick="Solve()"><span>Solve</span></button>
+				</div>
+			</div>
+
+			<div class="col-md-auto" id="puzzle2">
+				<div class="card animated fadeInUp delay-4s">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: eng4153@gmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello,<br><br>
+
+							You can call me Agnes! I will be your artificial assistant on this adventure, forwarding your mail and other monotonous things. The world sure is full of monotonous things. Your email is eng4153@gmail.com. Please create your own password. I’m too busy looking at pictures of cracked concrete.<br><br>
+
+							My condolences, Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Mother Please Call Me Back”<br><br>
+
+						Congrats on the job honey. Please take lots of pictures of your adventures and friends!!! We love you and are so proud of you! Also, we’re letting you know that your dog Scooby just passed away, we couldn’t figure out what kind of food he liked. Please let us know if this is ok for his eulogy: “RIP <strong>Scooby</strong>, starving at the tender age of <strong>21</strong>, in this year of our lord <strong>2049</strong>”.
+					</div>
+					<button class="btn btn-primary d-none" id="solve1" onclick="Solve()"><span>Solve</span></button>
+				</div>
+			</div>
+
+			<div class="col-md-auto" id="puzzle3">
+				<div class="card animated fadeInUp delay-5s">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Sup.<br><br>
+
+							This is Agnes. I’ll be your spirit guide on this science misadventure. I’m like, so into helping you out as your new artificially intelligent virtual friend of sorts! Your email is legalizesushi18plus@protonmail.com. I don’t want to step on your toes, so please create your own password.<br><br>
+
+							Fight on, Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Least Favorite Sister” <br><br>
+
+						What’s up nerd! Haha just kidding omg I can’t believe I just wrote out haha haha. Anyways, just wanted to let you know <strong>Happy 46th birthday</strong>! It’s crazy you and that movie were made in the same year! Ew right? And your friend Agnes is like so cool. I’m sorry we can’t watch <strong>Finding Nemo</strong> this year, but you should totally watch it with Agnes! I know you just <i>love that fish</i>!
+					</div>
+					<button class="btn btn-primary d-none" id="solve2" onclick="Solve()"><span>Solve</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		The Numbers Game: Explanation
+	</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand">Game Guide</a>
+		<form class="form-inline">
+			<button class="btn btn-outline-success" type="button" onclick="window.location.href = 'index.html'">Go Back</button>		
+		</form>
+	</nav>
+
+<center>
+
+	<div class="container m-3 p-3 d-inline-block">
+		<div id="accordion">
+		  <div class="card">
+		    <div class="card-header" id="headingOne">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          Rules
+		        </button>
+		      </h5>
+		    </div>
+
+		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+		      <div class="card-body">
+		        <p>
+		        	You, the player, and the AI will be given a set of numbers.
+		        </p>
+		        <p>
+		        	Select one number at a time, either the first or last number. Once you make your choice the AI will also make a choice.
+		        </p>
+		        <p>
+		        	After picking a number, neither player can select the number again. You can only pick the next first or next last number.
+		        </p>
+		        <p>
+		        	After all the numbers are chosen, each player's numbers are added up and the highest total wins.
+		        </p>
+		        <p>
+		        	<strong>Controls:</strong> just click/tap either the first or last number that isn't already highlighted! The reset button will completely restart the game. The game ends when all numbers have been collected.
+		        </p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingTwo">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		          Goal
+		        </button>
+		      </h5>
+		    </div>
+		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		      <div class="card-body">
+		        The goal is to develop a strategy where the first player, you, will win every time no matter the generated values. There is a strategy/algorithm that guarantees a win for whoever goes first.
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingThree">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		          Hints
+		        </button>
+		      </h5>
+		    </div>
+		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+		      <div class="card-body">
+		        <ul class="list-group">
+		        	<li class="list-group-item d-flex justify-content-between align-items-center">
+					    <p>This strategy can be described in terms of 3 steps. Think about how you can <i>prepare</i> a method before you begin <i>selecting</i>.</p>
+					    <span class="badge badge-primary badge-pill">1</span>
+					</li>
+					  <li class="list-group-item d-flex justify-content-between align-items-center">
+					   	<p>Try to find patterns when you win. Don't just reset the game everytime, watch the colors or <strong>indices</strong> and keep in mind what you selected in a win or loss.</p>
+					    <span class="badge badge-primary badge-pill">2</span>
+					  </li>
+					  <li class="list-group-item d-flex justify-content-between align-items-center">
+					  	<div class="container">
+					  		<p> An array is used here to store a collection of numbers. Each element in an array is identified by an <strong>index</strong>. In this case the index of the first number is 0, the next is 1, and so on until the last element/number.</p>
+					    	<img src="img/array_presentation.jpg" class="img-fluid" alt="Array Representation">
+					  	</div>
+					    
+					    <span class="badge badge-primary badge-pill">3</span>
+					  </li>
+					  <li class="list-group-item d-flex justify-content-between align-items-center">
+					  	<div class="container">
+					  		The problem can be looked at in terms of even and odd numbers.
+					  	</div>
+					    
+					    <span class="badge badge-primary badge-pill">4</span>
+					  </li>
+					  <li class="list-group-item d-flex justify-content-between align-items-center">
+					  	<div class="container">
+					  		Try using a calculator!
+					  	</div>
+					    
+					    <span class="badge badge-primary badge-pill">5</span>
+					  </li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</center>
+
+</body>
+</html>

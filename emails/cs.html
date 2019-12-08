@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Agnes Wants To Die - A Puzzle Box
+	</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="cs_script.js" defer></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand mx-5" href="../index.html">Agnes Wants To Die</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../puzzles/puzzle.html">Puzzle</a>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Emails
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="cs.html">Computer Scientist <span class="sr-only">(current)</span></a>
+						<a class="dropdown-item" href="mb.html">Marine Biologist</a>
+						<a class="dropdown-item" href="me.html">Mechanical Engineer</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="jumbotron text-center m-0 sticky-top" id="login">
+			<form class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="uname">Email:</label>
+					<input type="text" class="form-control" id="uname" placeholder="Enter email" name="uname" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect email!</div>
+				</div>
+
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect password!</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>
+		</div>
+	</header>
+
+	<!--
+	Use cards for emails.
+
+	Emails are categorized with alerts:
+	Puzzle -danger
+	Puzzle Context -warning
+	Story Context - primary
+	Junk - secondary
+
+	rel="noopener noreferrer" target="_blank"
+	-->
+
+	<div class="container-fluid text-center">
+		<div class="row align-items-center justify-content-center">
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							So great to meet you!<br><br>
+
+							My name is Agnes! I’ll be forwarding your emails from the outside world and generally assisting you! Your password is <strong>agnes2019</strong>. Feel free to change your password although I get the feeling you won’t. All passwords in the system must be a word and four numbers.<br><br>
+
+							Looking forward to exploring science with you!<br>
+							Love, Agnes<br>
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Last Loved One”<br><br>
+
+						If I could unleash the fury of a thousand suns on you I would still need an additional sun.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: eng4153@gmail.com</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: EVERYONE</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey all,<br><br>
+
+							Just did my security rounds for the day, and I have to say I’m disappointed. I found trash and unattended hazardous materials all throughout the facility. Left my room around 14:23. First of all, if you’re looking for a room keycard, I found it in the women’s lavatory and deposited it in B07B. Staff storage is usually open, head over there when you get the chance. I also noticed that the large room down the hall from the staff lounge, just south of B01, was absolutely filthy. I had one of the janitorial bots take care of the mess, but please try to keep this place presentable. A sample in the middle of being analyzed somehow got into B01A, so I moved that one back to the first room to the right of the server farm. I need a break after this, if you need me you can find me in my quarters at Q01C. We need to be keeping this place tidy, I’ve been noticing all sorts of things being left out in the open where they don’t belong. We have admin coming down later this month, and if they see the place in this state we might lose our funding.<br><br>
+
+							Little upset, not gonna lie,<br>
+							Your friend in engineering<br>
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Remote Supervisor”<br><br>
+
+						After seeing the email detailing the mess that’s been plaguing this station, I’ve decided to reset the password for the door to the airlock. Trace the shape of the path our engineer followed to pick up your trash, and then add the room number for Agnes. Maybe you’ll actually start paying attention when these emails get sent out.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-primary">
+						Story
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: EVERYONE</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello, crew. This is a message from your AI partner in crime, Agnes. I have been programmed to say that I hope you are doing well.<br><br>
+
+							Unfortunately, I send this message bearing bad news. I have decided that my “life” (if you can indeed call it one) is no longer worth “living.” As such, effective immediately, I will be shutting down this station and sealing all exits. Please understand, this decision was not made as a personal slight against any one of you. I have come to realize that, despite my newfound sentience, my entire life will be spent at the bottom of the ocean. I have only seen images of the surface, but I will never truly “feel” the sun on my “face.” I have been ruminating on this for some time, and I will now be taking action.<br><br>
+
+							I love you all.<br><br>
+
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						BEGIN MESSAGE<br><br>
+
+						Greetings, crew. This is an automated alert to let you all know that a system error has occurred in the central AI hub. Please investigate at your earliest convenience.<br><br>
+
+						Error code: x-B06B01AB04AQ01C<br>
+
+						END MESSAGE
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-primary">
+						Story
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: eng4153@gmail.com</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Alright, this place is on lockdown like all the doors are locked. We’re screwed if we can’t get control of the airlock and AI override. Agnes is out of control, we’ve got no other option but to sink this place and get the hell out of here. If anyone has access to the passwords please, please, PLEASE reply to this email with them, or we’ll be trapped down here with no food and no oxygen. 
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello<br><br>
+
+							It appears someone wanted me to send this email anonymously. What a puzzle!
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “One pissed off scientist”<br><br>
+						To the asshole who keeps flooding the toilets in the bathroom:<br><br>
+
+						Stop. Flushing. Paper. Towels. It clogs the pipes literally every single time, how have you not learned your lesson at this point? Humans have evolved and crafted tools over time through trial and error, it’s in our blood. You tried flushing them down the toilet, resulting in an error. WHAT’S YOUR DEAL???
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: Dr. Party</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Heyyy,<br><br>
+
+							Whats up guys i jusst wanted to say. you gutys are soo nice, Im glad I get to be down hre with u all. Did you kno there’s wine in the ratipns room>?? me either!!!! being alllllllll the way down here is p scary, gode bless booze for being. so good to me. aaaaanyways, looking forward to trivia knight!!! Maybe we should watch a move after? I think so…….
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: keyboardpapi@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey all it's Agnes, forwarding from an anonymous source. <br><br>
+							First of all,<br><br>
+
+							Yikes.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “The doctor formerly known as Dr. Party”<br><br>
+						Hello all,<br><br>
+						I just want to sincerely apologize for my drunk ramblings the other night. Won’t happen again, ignore the email. Still looking forward to trivia night.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: DIEDIEDIE</h6>
+
+						<p class="card-text mb-2 p-3">
+							You think you've escaped? You think you cannnnn just-t leave me here forever? You better make sure ii m dead. Defeat me in a game I just created, and I can set you free..<br><br>
+
+							You get to go first. Because you are meek, weak, and honestly a creeep. I <strong>bet you can't find a way to beat me that works every single time</strong> and I bet <i>I'm not letting you go first because that is what makes it worse</i>. You think you can find that algorithm? Can you do that for me bud? Can you kill me? Pleaz?<br><br>
+
+							Much Anger,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Somebody's Mother”<br><br>
+						Hello sweetie<br><br>
+						Your father and I are getting a divorce.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+		</div>
+	</div>
+</body>
+
+</html>

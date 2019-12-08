@@ -1,0 +1,30 @@
+#puzzleExplanation {
+	background-color: #282E36;
+	color: #A3F5BD;
+	padding: 100px 25px;
+}
+
+#puzzleContainer {
+	padding: 100px 25px;
+}
+
+.card {
+	width: 28rem;
+}
+
+body {
+	background-color: #9B9CA2;
+}
+
+/*For changing solve button on puzzle page*/
+button:hover span {
+	display: none;
+}
+
+button:hover:before {
+	content: "Are you sure?";
+}
+
+.map {
+	max-width: 1000px;
+}

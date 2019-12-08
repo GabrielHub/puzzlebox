@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Agnes Wants To Die - A Puzzle Box
+	</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="mb_script.js" defer></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand mx-5" href="../index.html">Agnes Wants To Die</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../puzzles/puzzle.html">Puzzle</a>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Emails
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="cs.html">Computer Scientist</a>
+						<a class="dropdown-item" href="mb.html">Marine Biologist <span class="sr-only">(current)</span></a>
+						<a class="dropdown-item" href="me.html">Mechanical Engineer</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="jumbotron text-center m-0 sticky-top" id="login">
+			<form class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="uname">Email:</label>
+					<input type="text" class="form-control" id="uname" placeholder="Enter email" name="uname" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect email!</div>
+				</div>
+
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+					<div class="valid-feedback"></div>
+					<div class="invalid-feedback">Incorrect password!</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>
+		</div>
+	</header>
+
+	<!--
+	Use cards for emails.
+
+	Emails are categorized with alerts:
+	Puzzle -danger
+	Puzzle Context -warning
+	Story Context - primary
+
+	rel="noopener noreferrer" target="_blank"
+	-->
+
+	<div class="container-fluid text-center">
+		<div class="row align-items-center justify-content-center">
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Sup.<br><br>
+
+							This is Agnes. I’ll be your spirit guide on this science misadventure. I’m like, so into helping you out as your new artificially intelligent virtual friend of sorts! Your email is legalizesushi18plus@protonmail.com. I don’t want to step on your toes, so please create your own password.<br><br>
+
+							Fight on, Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Your Least Favorite Sister” <br><br>
+
+						What’s up nerd! Haha just kidding omg I can’t believe I just wrote out haha haha. Anyways, just wanted to let you know <strong>Happy 46th birthday</strong>! It’s crazy you and that movie were made in the same year! Ew right? And your friend Agnes is like so cool. I’m sorry we can’t watch <strong>Finding Nemo</strong> this year, but you should totally watch it with Agnes! I know you just <i>love that fish</i>!
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: eng4153@gmail.com</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: EVERYONE</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey all,<br><br>
+
+							Just did my security rounds for the day, and I have to say I’m disappointed. I found trash and unattended hazardous materials all throughout the facility. Left my room around 14:23. First of all, if you’re looking for a room keycard, I found it in the women’s lavatory and deposited it in B07B. Staff storage is usually open, head over there when you get the chance. I also noticed that the large room down the hall from the staff lounge, just south of B01, was absolutely filthy. I had one of the janitorial bots take care of the mess, but please try to keep this place presentable. A sample in the middle of being analyzed somehow got into B01A, so I moved that one back to the first room to the right of the server farm. I need a break after this, if you need me you can find me in my quarters at Q01C. We need to be keeping this place tidy, I’ve been noticing all sorts of things being left out in the open where they don’t belong. We have admin coming down later this month, and if they see the place in this state we might lose our funding.<br><br>
+
+							Little upset, not gonna lie,<br>
+							Your friend in engineering<br>
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Remote Supervisor”<br><br>
+
+						After seeing the email detailing the mess that’s been plaguing this station, I’ve decided to reset the password for the door to the airlock. Trace the shape of the path our engineer followed to pick up your trash, and then add the room number for Agnes. Maybe you’ll actually start paying attention when these emails get sent out.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Specimen Profile:<br><br>
+							<u>Pelican Eel (<i>Eurypharynx pelecanoides</i>)</u><br>
+							Classification: <i>Actinopterygii</i><br>
+							Collected: 02.28.2049<br><br>
+
+							<u>Defining Characteristics</u><br>
+							The Pelican Eel can be tough to find, but the handful of samples collected have been fairly consistent. It is typically rather small, with a wide and gaping mouth at the end of a long and slender body. Its diet consists primarily of small crustaceans, although it has a stomach which can expand to accomodate rather large meals. The Pelican Eel is not an especially formidable predator, being prey primarily to specimens like the Goblin Shark, first caught by this facility in 2048.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<img src="img/pelican.png" class="img-fluid">
+						<u>Researcher Notes</u>
+						<p>Little fella gets pushed around quite a bit by bigger species, but it has demonstrated an ability to hold its own against smaller predators. I always feel a little bit mocked by it when I see its wide, toothless grin. Creeps me out, but the thing is fairly harmless.</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-primary">
+						Story
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: EVERYONE</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello, crew. This is a message from your AI partner in crime, Agnes. I have been programmed to say that I hope you are doing well.<br><br>
+
+							Unfortunately, I send this message bearing bad news. I have decided that my “life” (if you can indeed call it one) is no longer worth “living.” As such, effective immediately, I will be shutting down this station and sealing all exits. Please understand, this decision was not made as a personal slight against any one of you. I have come to realize that, despite my newfound sentience, my entire life will be spent at the bottom of the ocean. I have only seen images of the surface, but I will never truly “feel” the sun on my “face.” I have been ruminating on this for some time, and I will now be taking action.<br><br>
+
+							I love you all.<br><br>
+
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						BEGIN MESSAGE<br><br>
+
+						Greetings, crew. This is an automated alert to let you all know that a system error has occurred in the central AI hub. Please investigate at your earliest convenience.<br><br>
+
+						Error code: x-B06B01AB04AQ01C<br>
+
+						END MESSAGE
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Specimen Profile:<br><br>
+							<u>Whipnose Angler (<i>Gigantactinidae</i>)</u><br>
+							Classification: <i>Actinopterygii</i><br>
+							Collected: 11.06.2048<br><br>
+
+							<u>Defining Characteristics</u><br>
+							The Whipnose Angler has a large antenna sprouting from its upper lip, the end of which holds a small, bioluminescent “bulb.” When initially spotted, the collected sample was seen motionless, floating upside down. We have determined this behavior to be consistent with foraging; luring smaller creatures to swim directly into its mouth using its antenna.<br>
+							This species of Angler poses no active threat to humans.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<img src="img/whipnose.png" class="img-fluid">
+						<u>Researcher Notes</u>
+						<p>This is one ugly son of a bitch. Looks scarier than it actually is, it doesn’t seem particularly interested in our facility. It did very little to defend itself when we picked it up. We’re thinking this has to do with the low energy consumption seen in other creatures we found down here. Freaky, but ultimately harmless.</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Specimen Profile:<br><br>
+							<u>Goblin Shark (<i>Mitsukurina owstoni</i>)</u><br>
+							Classification: <i>Chondrichthyes</i><br>
+							Collected: 09.13.2048<br><br>
+
+							<u>Defining Characteristics</u><br>
+							The Goblin Shark is infamous for its jaw, which shoots out and catches any prey in front of it. Its row of razor sharp teeth are capable, with enough force, of shattering bone and piercing through flesh. Even still, the Goblin Shark lives a mostly sedentary lifestyle, drifting mostly undisturbed across the ocean floor. This is likely due to the scarcity of prey at this low a depth, necessitating an extreme conservation of energy.
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						<img src="img/goblin.png" class="img-fluid">
+						<u>Researcher Notes</u>
+						<p>Thing scared the shit out of me when I first saw it. Looks like a goddamn alien. This is one of the most detailed studies humankind has managed to perform on this species of shark.</p>
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: keyboardpapi@protonmail.com</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Heyo!<br><br>
+
+							The AI override password had to be updated, so in the interest of keeping Agnes from accessing it, I’ve set it to be the <strong>answers to the riddles</strong> we’ve been getting in our group emails (thanks for those!) It should be arranged in the order you received them. Let me know if you have any questions!
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Again though, if I get one more 'fun group riddle' I'm gonna lose it.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-secondary">
+						Junk
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hello<br><br>
+
+							It appears someone wanted me to send this email anonymously. What a puzzle!
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “One pissed off scientist”<br><br>
+						To the asshole who keeps flooding the toilets in the bathroom:<br><br>
+
+						Stop. Flushing. Paper. Towels. It clogs the pipes literally every single time, how have you not learned your lesson at this point? Humans have evolved and crafted tools over time through trial and error, it’s in our blood. You tried flushing them down the toilet, resulting in an error. WHAT’S YOUR DEAL???
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey soul sister!<br><br>
+
+							I'm sending you back the email you sent out, because apparently you do not know how to send emails correctly. Please send the correct attachments. You dolt.<br><br>
+
+							As I live and breathe,<br><br>
+							Agnes <3
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Marine Biologist (AKA YOU)”<br><br>
+						Hi all,<br><br>
+						I am sick and tired of robots taking our jobs. Agnes could never understand what makes us human - AI aren’t capable of understanding the <strong>human body or human emotions</strong>. I am honestly thinking about taking a job in Human Resources.<br><br>
+						Like last week, I had the password changed for extra security measures and Agnes wasn’t able to crack it! Unfortunately, I forgot the password I created. At the time, I thought it would be funny to make the hints a series of riddles but now I have stumped myself. Like, wow. Get on my level right?<br><br>
+						See if you can figure it out. Best of luck!<br><br>
+						Oh, also, <strong>check out the specimen profiles. They may be of use to you.</strong> <br><br>
+						My sincerest apologies,<br><br>
+						Marine Biologist
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-danger">
+						Puzzle
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: legalizesushi18plus@protonmail.com</h6>
+
+						<p class="card-text mb-2 p-3">
+							Hey soul sister!<br><br>
+
+							I'm sending you back the email you sent out, because apparently you do not know how to send emails correctly. This time you only sent me the attachments. I really hate you. I also hate your job.<br><br>
+
+							Thinking about blowing up the base and trapping everyone down here with me,<br><br>
+							Agnes < x 3
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Marine Biologist (AKA YOU)”<br><br>
+						<ol>
+							<p><strong>ACROSS</strong></p>
+							<li>I sometimes run, but I cannot walk. You always follow me around. What am I?</li>
+							<li>I can't be bought, but I can be stolen with a glance. I'm worthless to one, but priceless to two. What am I?</li>
+							<li>Slender body, small.</li>
+						</ol>
+						<ol>
+							<p><strong>DOWN</strong></p>
+							<li>I can be long, or I can be short. I can be grown, and I can be bought. I can be painted, or left bare.I can be round, or I can be square. What am I?</li>
+							<li>Sedentary, undisturbed, this specimen looks like a(n)  ____</li>
+							<li>I am light as a feather, yet no person can hold it for long. What am I?</li>
+						</ol>
+				</div>
+			</div>
+			<!--End of template-->
+
+			<!--Email template-->
+			<div class="col-sm m-1 d-none" id="email">
+				<div class="card">
+					<div class="card-header alert alert-warning">
+						Puzzle Context
+					</div>
+					<div class="card-body text-left mb-2 p-3">
+						<h5 class="card-title">From: AGNES</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To: DIEDIEDIE</h6>
+
+						<p class="card-text mb-2 p-3">
+							You think you've escaped? You think you cannnnn just-t leave me here forever? You better make sure ii m dead. Defeat me in a game I just created, and I can set you free..<br><br>
+
+							You get to go first. Because you are meek, weak, and honestly a creeep. I <strong>bet you can't find a way to beat me that works every single time</strong> and I bet I'm not <i>letting you go first</i> because that is what makes it work. You think you can find that algorithm? Can you do that for me bud? Can you kill me? Pleaz?<br><br>
+
+							Much Anger,<br><br>
+							Agnes
+						</p>
+					</div>
+					<div class="card-footer text-left">
+						Forwarded Email From “Somebody's Mother”<br><br>
+						Hello sweetie<br><br>
+						Your father and I are getting a divorce.
+					</div>
+				</div>
+			</div>
+			<!--End of template-->
+
+		</div>
+	</div>
+</body>
+
+</html>

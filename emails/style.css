@@ -1,0 +1,12 @@
+.container-fluid {
+	background-color: #282E36;
+	padding: 85px 25px;
+}
+
+body {
+	background-color: #282E36;
+}
+
+.card {
+	width: 34rem;
+}

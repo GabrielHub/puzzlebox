@@ -1,0 +1,21 @@
+.jumbotron {
+	background-color: #282E36;
+	color: #A3F5BD;
+	padding: 300px 100px;
+	text-shadow: 2px 2px #000;
+}
+
+.container-fluid {
+	color: #A3F5BD;
+	padding: 60px 50px;
+}
+
+body {
+	background-color: #282E36;
+}
+
+.bg-cover {
+	background-image: url("header_image.jpg");
+	width: 100%;
+	background-size: cover;
+}
