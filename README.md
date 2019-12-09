@@ -19,3 +19,5 @@ A narrative driven puzzlebox that was personally designed based on a user's them
 	* Algorithm puzzle kills the AI and wins it
 
 The original box was sent with a document of the printed email puzzles, a physical chess set, and the crossword/riddle puzzle and specimen profiles printed.
+
+Website designed by me, using Bootstrap, and the animate.css by Daniel Eden. Made with HTML, CSS, Javascript and JQuery.
